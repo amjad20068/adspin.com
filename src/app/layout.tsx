@@ -3,6 +3,8 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
+import { CustomCursor } from "@/components/ui/CustomCursor";
+import { DesignGridOverlay } from "@/components/ui/DesignGridOverlay";
 import { AGENCY_CONFIG } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -25,7 +27,9 @@ export const metadata: Metadata = {
     "Ad Spin",
     "Healthcare Branding",
     "Hospital Branding",
-    "Commercial Video Production"
+    "Commercial Video Production",
+    "Poster Design",
+    "Camera Shoots"
   ],
   authors: [{ name: "AD SPIN" }],
   creator: "AD SPIN",
@@ -96,6 +100,8 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-white text-brand-black selection:bg-brand-red selection:text-white">
+        <CustomCursor />
+        <DesignGridOverlay />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
@@ -104,4 +110,3 @@ export default function RootLayout({
     </html>
   );
 }
-
