@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { ArrowLeft, ArrowUpRight, CheckCircle2, MessageCircle, FileDown, Calendar, MapPin, Tag } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, CheckCircle2, FileDown, Calendar, MapPin, Tag } from "lucide-react";
 import { PROJECTS, Project } from "@/data/projects";
 import { Button } from "@/components/ui/Button";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { AGENCY_CONFIG } from "@/lib/utils";
 
 interface PageProps {
@@ -208,9 +209,9 @@ export default function CaseStudyPage({ params }: PageProps) {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-semibold tracking-wide transition-all shadow-md"
+                  className="w-full flex items-center justify-center gap-2.5 py-3 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-semibold tracking-wide transition-all shadow-md"
                 >
-                  <MessageCircle className="w-4 h-4 fill-white" />
+                  <WhatsAppIcon size={16} className="text-white" />
                   <span>Book Consultation via WhatsApp</span>
                 </a>
                 <Link

@@ -5,11 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { Menu, Instagram, MessageCircle, ArrowUpRight } from "lucide-react";
+import { Menu, Instagram, ArrowUpRight } from "lucide-react";
 import { NAV_LINKS } from "@/data/navigation";
 import { AGENCY_CONFIG } from "@/lib/utils";
 import { MobileNav } from "./MobileNav";
 import { Button } from "@/components/ui/Button";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -103,10 +104,10 @@ export const Header: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Book via WhatsApp"
-                className="hidden xl:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-semibold text-brand-black bg-white hover:bg-[#25D366] hover:text-white border border-brand-gray-200/80 transition-all duration-200 shadow-xs"
+                className="hidden xl:inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-semibold text-brand-black bg-white hover:bg-[#25D366] hover:text-white border border-brand-gray-200/80 transition-all duration-200 shadow-xs group"
               >
-                <MessageCircle className="w-3.5 h-3.5 text-[#25D366] group-hover:text-white fill-[#25D366]" />
-                WhatsApp
+                <WhatsAppIcon size={16} className="text-[#25D366] group-hover:text-white transition-colors" />
+                <span>WhatsApp</span>
               </a>
 
               {/* Primary CTA: Let's Talk */}
@@ -123,9 +124,9 @@ export const Header: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Book via WhatsApp"
-                className="p-2 rounded-full bg-[#25D366] text-white"
+                className="p-2.5 rounded-full bg-[#25D366] text-white flex items-center justify-center"
               >
-                <MessageCircle className="w-4 h-4 fill-white" />
+                <WhatsAppIcon size={18} className="text-white" />
               </a>
               <button
                 onClick={() => setMobileOpen(true)}

@@ -5,9 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight, Instagram, Phone, Mail, MessageCircle } from "lucide-react";
+import { X, ArrowRight, Instagram, Phone, Mail } from "lucide-react";
 import { NAV_LINKS } from "@/data/navigation";
 import { AGENCY_CONFIG } from "@/lib/utils";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 interface MobileNavProps {
   isOpen: boolean;
@@ -88,10 +89,10 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
               href={AGENCY_CONFIG.getWhatsAppUrl("Hello Ad Spin! I would like to book a consultation for our brand.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-medium text-sm transition-all shadow-sm"
+              className="w-full flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-medium text-sm transition-all shadow-sm"
             >
-              <MessageCircle className="w-4 h-4 fill-white text-[#25D366]" />
-              Book via WhatsApp (+91 773 625 9099)
+              <WhatsAppIcon size={20} className="text-white" />
+              <span>Book via WhatsApp (+91 773 625 9099)</span>
             </a>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-brand-gray-600 gap-3 pt-2">

@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
-import { ArrowUpRight, CheckCircle2, MessageCircle, ArrowRight } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, ArrowRight } from "lucide-react";
 import { SERVICES } from "@/data/services";
 import { PROJECTS } from "@/data/projects";
 import { Button } from "@/components/ui/Button";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { AGENCY_CONFIG } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -93,7 +94,7 @@ export default function ServicesPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-semibold tracking-wide transition-all shadow-sm"
                     >
-                      <MessageCircle className="w-3.5 h-3.5 fill-white" />
+                      <WhatsAppIcon size={16} className="text-white" />
                       <span>Enquire on WhatsApp</span>
                     </a>
 

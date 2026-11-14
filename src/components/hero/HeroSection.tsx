@@ -4,10 +4,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Sparkles, MessageCircle, Compass, Layers, Film } from "lucide-react";
+import { ArrowUpRight, Sparkles, Compass, Layers, Film } from "lucide-react";
 import { SpiralMark } from "@/components/ui/SpiralMark";
 import { Button } from "@/components/ui/Button";
 import { StudioClock } from "@/components/ui/StudioClock";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { AGENCY_CONFIG } from "@/lib/utils";
 
 export const HeroSection: React.FC = () => {
@@ -124,7 +125,7 @@ export const HeroSection: React.FC = () => {
                 variant="whatsapp"
                 className="shadow-sm"
               >
-                <MessageCircle className="w-4 h-4 text-white fill-white mr-1.5" />
+                <WhatsAppIcon size={18} className="text-white mr-2" />
                 <span>Book on WhatsApp</span>
               </Button>
             </div>

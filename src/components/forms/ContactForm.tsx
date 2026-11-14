@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, CheckCircle2, AlertCircle, MessageCircle, ArrowRight } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle, ArrowRight } from "lucide-react";
 import { AGENCY_CONFIG } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 const SERVICE_OPTIONS = [
   "Branding & Logo Design",
@@ -108,9 +109,9 @@ export const ContactForm: React.FC = () => {
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-semibold text-xs tracking-wide shadow-md transition-all group"
+            className="shrink-0 inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-semibold text-xs tracking-wide shadow-md transition-all group"
           >
-            <MessageCircle className="w-4 h-4 fill-white" />
+            <WhatsAppIcon size={18} className="text-white" />
             <span>Chat on WhatsApp</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </a>

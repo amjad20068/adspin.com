@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight, MessageCircle, Phone, Mail } from "lucide-react";
+import { ArrowUpRight, Phone, Mail } from "lucide-react";
 import { SpiralMark } from "@/components/ui/SpiralMark";
 import { Button } from "@/components/ui/Button";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { AGENCY_CONFIG } from "@/lib/utils";
 
 export const CtaBanner: React.FC = () => {
@@ -48,7 +49,7 @@ export const CtaBanner: React.FC = () => {
                 size="lg"
                 variant="whatsapp"
               >
-                <MessageCircle className="w-4 h-4 mr-1.5 fill-white" />
+                <WhatsAppIcon size={18} className="mr-2 text-white" />
                 <span>Book on WhatsApp</span>
               </Button>
             </div>

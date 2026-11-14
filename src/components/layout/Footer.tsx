@@ -1,11 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, Instagram, Phone, Mail, Globe, MessageCircle, FileDown } from "lucide-react";
+import { ArrowUpRight, Instagram, Phone, Mail, Globe, FileDown } from "lucide-react";
 import { NAV_LINKS } from "@/data/navigation";
 import { SERVICES } from "@/data/services";
 import { AGENCY_CONFIG } from "@/lib/utils";
 import { SpiralMark } from "@/components/ui/SpiralMark";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export const Footer: React.FC = () => {
   return (
@@ -33,7 +34,7 @@ export const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-medium text-sm transition-all shadow-md group"
             >
-              <MessageCircle className="w-4 h-4 fill-white" />
+              <WhatsAppIcon size={18} className="text-white" />
               <span>Instant WhatsApp Booking</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
@@ -83,7 +84,7 @@ export const Footer: React.FC = () => {
                 className="w-9 h-9 rounded-full bg-brand-gray-900 border border-brand-gray-800 flex items-center justify-center text-brand-gray-300 hover:text-white hover:bg-[#25D366] hover:border-[#25D366] transition-all"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon size={16} />
               </a>
               <a
                 href={AGENCY_CONFIG.officialWebsite}

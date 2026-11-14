@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Video, Film, Play, ArrowUpRight, Camera, Sparkles, MessageCircle } from "lucide-react";
+import { Video, Film, Play, ArrowUpRight, Camera, Sparkles } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { AGENCY_CONFIG } from "@/lib/utils";
 
 export const VideoProductionShowcase: React.FC = () => {
@@ -174,9 +175,9 @@ export const VideoProductionShowcase: React.FC = () => {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-brand-gray-400 hover:text-white flex items-center gap-1 font-mono text-[11px]"
+                  className="text-brand-gray-400 hover:text-white flex items-center gap-1.5 font-mono text-[11px]"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
+                  <WhatsAppIcon size={14} className="text-[#25D366]" />
                   <span>Book Shoot</span>
                 </a>
               </div>
@@ -202,7 +203,7 @@ export const VideoProductionShowcase: React.FC = () => {
             rel="noopener noreferrer"
             className="shrink-0 inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-semibold tracking-wide shadow-md transition-all"
           >
-            <MessageCircle className="w-4 h-4 fill-white" />
+            <WhatsAppIcon size={18} className="text-white" />
             <span>Book Video Shoot via WhatsApp</span>
           </a>
         </div>
