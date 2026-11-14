@@ -10,7 +10,7 @@ export const WhatsAppFloat: React.FC = () => {
   const [showTooltip, setShowTooltip] = useState(true);
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex items-center gap-3">
+    <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 flex items-center gap-3">
       {/* Interactive Tooltip bubble */}
       <AnimatePresence>
         {showTooltip && (
@@ -41,11 +41,12 @@ export const WhatsAppFloat: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat & Book on WhatsApp with Ad Spin"
-        whileHover={{ scale: 1.1, rotate: [0, -6, 6, 0] }}
+        whileHover={{ scale: 1.08, rotate: [0, -5, 5, 0] }}
         whileTap={{ scale: 0.95 }}
-        className="relative group flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-[0_8px_25px_rgba(37,211,102,0.45)] hover:bg-[#1EBE5D] transition-colors"
+        className="relative group flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white shadow-[0_8px_25px_rgba(37,211,102,0.45)] hover:bg-[#1EBE5D] transition-colors"
       >
-        <WhatsAppIcon size={30} className="text-white drop-shadow-sm" />
+        <WhatsAppIcon size={26} className="text-white drop-shadow-sm sm:hidden" />
+        <WhatsAppIcon size={30} className="text-white drop-shadow-sm hidden sm:inline-block" />
         <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-red opacity-75"></span>
           <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-brand-red border-2 border-white"></span>

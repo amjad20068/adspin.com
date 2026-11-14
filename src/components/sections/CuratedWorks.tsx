@@ -54,7 +54,7 @@ export const CuratedWorks: React.FC = () => {
     },
     {
       id: "carino-bull",
-      slug: "carino-durability",
+      slug: "carino",
       title: "The King of Durability — Built for Bold Ideas",
       client: "Royal Carino",
       category: "Brand Identity & Billboard",
