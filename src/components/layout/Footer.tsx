@@ -17,41 +17,8 @@ export const Footer: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Top Big Callout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-16 border-b border-brand-gray-800">
-          <div className="lg:col-span-7 space-y-4">
-            <span className="text-xs uppercase tracking-widest text-brand-red font-mono font-semibold">
-              Ad Spin — Creative Agency
-            </span>
-            <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight text-white leading-tight">
-              Let&apos;s build brands that <span className="text-brand-red italic font-normal">refuse</span> to be ignored.
-            </h2>
-          </div>
-          <div className="lg:col-span-5 flex flex-col justify-end items-start lg:items-end gap-4">
-            <a
-              href={AGENCY_CONFIG.getWhatsAppUrl("Hello Ad Spin team! We would like to initiate a new project with you.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-medium text-sm transition-all shadow-md group"
-            >
-              <WhatsAppIcon size={18} className="text-white" />
-              <span>Instant WhatsApp Booking</span>
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
-            <a
-              href="/Adspin_Portfolio.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs font-mono text-brand-gray-400 hover:text-white transition-colors"
-            >
-              <FileDown className="w-3.5 h-3.5 text-brand-red" />
-              Download Official 72-Page Portfolio PDF (5.4 MB)
-            </a>
-          </div>
-        </div>
-
         {/* Main Footer Links Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 py-16 border-b border-brand-gray-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-brand-gray-800">
           {/* Col 1: Agency Brand & Intro */}
           <div className="lg:col-span-4 space-y-5">
             <Link href="/" className="inline-block">
@@ -67,6 +34,17 @@ export const Footer: React.FC = () => {
             <p className="text-sm text-brand-gray-400 leading-relaxed max-w-sm">
               Ad Spin is a creative branding, advertising, and digital experience agency. We combine strategic thinking, Swiss typographic precision, and high-conversion motion to build brands that connect and scale.
             </p>
+            <div className="pt-1">
+              <a
+                href="/Adspin_Portfolio.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-mono text-brand-gray-300 hover:text-brand-red transition-colors"
+              >
+                <FileDown className="w-3.5 h-3.5 text-brand-red" />
+                <span>Official 72-Page Portfolio PDF (5.4 MB)</span>
+              </a>
+            </div>
             <div className="flex items-center gap-3 pt-2">
               <a
                 href={AGENCY_CONFIG.instagram}
