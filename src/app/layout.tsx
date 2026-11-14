@@ -3,8 +3,6 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
-import { CustomCursor } from "@/components/ui/CustomCursor";
-import { DesignGridOverlay } from "@/components/ui/DesignGridOverlay";
 import { AGENCY_CONFIG } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -99,9 +97,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-white text-brand-black selection:bg-brand-red selection:text-white">
-        <CustomCursor />
-        <DesignGridOverlay />
+      <body className="min-h-screen flex flex-col bg-white text-brand-black selection:bg-brand-red selection:text-white antialiased">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

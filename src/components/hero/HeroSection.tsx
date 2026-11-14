@@ -4,47 +4,31 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Sparkles, Compass, Layers, Film } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 import { SpiralMark } from "@/components/ui/SpiralMark";
 import { Button } from "@/components/ui/Button";
-import { StudioClock } from "@/components/ui/StudioClock";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { AGENCY_CONFIG } from "@/lib/utils";
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-[95vh] flex flex-col justify-between pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
-      {/* Background Subtle Grid & Spiral Accents */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-60 pointer-events-none" />
-
-      {/* Floating subtle ambient red glow */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-brand-red/5 rounded-full blur-3xl pointer-events-none -z-10" />
-
-      {/* Architectural Corner Crop Marks (Signature Swiss Design Studio Detail) */}
-      <div className="hidden lg:block absolute top-28 left-8 text-[10px] font-mono text-brand-gray-300 pointer-events-none select-none">
-        ┌ ATELIER_GRID: 12-COL <br />
-        │ KERN: OPTICAL
-      </div>
-      <div className="hidden lg:block absolute top-28 right-8 text-[10px] font-mono text-brand-gray-300 pointer-events-none select-none text-right">
-        TYPE_SCALE: EDITORIAL ┐<br />
-        EST: 2024 │
-      </div>
+    <section className="relative min-h-[90vh] flex flex-col justify-between pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
+      {/* Subtle clean ambient background */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-brand-red/[0.04] rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto w-full flex-1 flex flex-col justify-center relative z-10 py-6 sm:py-10">
-        {/* Top Agency Pill & Live Studio Clocks */}
+        {/* Top Minimal Agency Pill */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-wrap items-center justify-between gap-4 mb-6 sm:mb-8"
+          className="flex items-center gap-2 mb-6 sm:mb-8"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gray-50 border border-brand-gray-200 text-xs font-mono uppercase tracking-widest text-brand-black shadow-xs">
             <span className="w-2 h-2 rounded-full bg-brand-red animate-pulse" />
-            <span>Creative Branding • Video Production • Digital Atelier</span>
+            <span>Creative Branding • Graphic Design • Advertising</span>
           </div>
-
-          {/* Live International Studio Clocks */}
-          <StudioClock />
         </motion.div>
 
         {/* Hero Editorial Headline with Signature Red Spiral */}
@@ -93,7 +77,7 @@ export const HeroSection: React.FC = () => {
         >
           <div className="lg:col-span-7">
             <p className="text-lg sm:text-xl md:text-2xl text-brand-gray-700 font-normal leading-relaxed max-w-2xl">
-              We combine creative thinking, strategic design, professional camera video production, and digital innovation to build brands that connect, communicate, and stand apart.
+              We combine creative thinking, strategic design, and digital innovation to build brands that connect, communicate, and stand apart.
             </p>
 
             {/* Quick Domain Badges */}
@@ -105,20 +89,20 @@ export const HeroSection: React.FC = () => {
                 02 Posters & Billboards
               </span>
               <span className="px-3 py-1 rounded-full bg-brand-gray-100 border border-brand-gray-200">
-                03 4K Camera Shoots & Reels
+                03 Social Media Campaigns
               </span>
             </div>
 
             {/* CTAs */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Button href="/work" size="lg" variant="primary">
-                <span>Explore Our Work</span>
+                <span>Explore Portfolio</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Button>
 
               <Button
                 href={AGENCY_CONFIG.getWhatsAppUrl(
-                  "Hello Ad Spin! I'm interested in starting a creative project with your agency."
+                  "Hello Ad Spin! I would like to consult on branding and design for our business."
                 )}
                 isExternal
                 size="lg"
@@ -126,7 +110,7 @@ export const HeroSection: React.FC = () => {
                 className="shadow-sm"
               >
                 <WhatsAppIcon size={18} className="text-white mr-2" />
-                <span>Book on WhatsApp</span>
+                <span>Chat on WhatsApp</span>
               </Button>
             </div>
           </div>
@@ -140,7 +124,7 @@ export const HeroSection: React.FC = () => {
               <div className="flex items-center justify-between text-xs font-mono text-brand-gray-500 mb-2">
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-brand-red" />
-                  LATEST SHOWCASE
+                  FEATURED WORK
                 </span>
                 <span className="flex items-center gap-1 text-brand-red group-hover:translate-x-0.5 transition-transform font-bold">
                   View Case Study <ArrowUpRight className="w-3 h-3" />
@@ -188,13 +172,15 @@ export const HeroSection: React.FC = () => {
             <span className="text-brand-red">•</span>
             <span>Haya Gold & Diamonds</span>
             <span className="text-brand-red">•</span>
-            <span>Carino Durability</span>
+            <span>Royal Carino</span>
             <span className="text-brand-red">•</span>
             <span>Fastrack India</span>
             <span className="text-brand-red">•</span>
             <span>Peter England</span>
             <span className="text-brand-red">•</span>
-            <span>Nesto Fashion India</span>
+            <span>Believers Hospital</span>
+            <span className="text-brand-red">•</span>
+            <span>St. Thomas Hospital</span>
             <span className="text-brand-red">•</span>
             <span>Crypto Liveon</span>
             <span className="text-brand-red">•</span>
@@ -204,15 +190,11 @@ export const HeroSection: React.FC = () => {
             <span className="text-brand-red">•</span>
             <span>Abeer Hospital</span>
             <span className="text-brand-red">•</span>
-            <span>Believers Hospital</span>
-            <span className="text-brand-red">•</span>
-            <span>St. Thomas Hospital</span>
-            <span className="text-brand-red">•</span>
             <span>Kans Group</span>
             <span className="text-brand-red">•</span>
             <span>Ontreo</span>
             <span className="text-brand-red">•</span>
-            {/* Duplicate for seamless infinite marquee loop */}
+            {/* Duplicate for seamless loop */}
             <span>33 Holdings</span>
             <span className="text-brand-red">•</span>
             <span>Naseem Healthcare Qatar</span>
@@ -223,17 +205,15 @@ export const HeroSection: React.FC = () => {
             <span className="text-brand-red">•</span>
             <span>Haya Gold & Diamonds</span>
             <span className="text-brand-red">•</span>
-            <span>Carino Durability</span>
+            <span>Royal Carino</span>
             <span className="text-brand-red">•</span>
             <span>Fastrack India</span>
             <span className="text-brand-red">•</span>
             <span>Peter England</span>
             <span className="text-brand-red">•</span>
-            <span>Nesto Fashion</span>
+            <span>Believers Hospital</span>
             <span className="text-brand-red">•</span>
-            <span>Crypto Liveon</span>
-            <span className="text-brand-red">•</span>
-            <span>O4 Optical</span>
+            <span>St. Thomas Hospital</span>
           </div>
         </div>
       </div>
