@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FileDown, Eye, ArrowUpRight, Sparkles, BookOpen, CheckCircle2 } from "lucide-react";
+import { FileDown, Eye, ArrowUpRight, BookOpen, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 interface PreviewPage {

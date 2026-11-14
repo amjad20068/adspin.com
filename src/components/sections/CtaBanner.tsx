@@ -11,17 +11,14 @@ export const CtaBanner: React.FC = () => {
     <section className="py-24 sm:py-32 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-3xl bg-brand-black text-white p-8 sm:p-14 lg:p-20 overflow-hidden shadow-2xl">
-          {/* Signature Red Spiral Background Graphics */}
-          <div className="absolute -right-16 -top-16 opacity-20 pointer-events-none select-none">
-            <SpiralMark size={360} speed={40} interactive={false} />
-          </div>
-          <div className="absolute -left-12 -bottom-12 opacity-10 pointer-events-none select-none">
-            <SpiralMark size={240} speed={30} interactive={false} />
+          {/* Subtle Red Spiral Watermark */}
+          <div className="absolute -right-16 -top-16 opacity-10 pointer-events-none select-none">
+            <SpiralMark size={360} animate={false} interactive={false} />
           </div>
 
           <div className="relative z-10 max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-red font-semibold">
-              <span className="w-2 h-2 rounded-full bg-brand-red animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-red" />
               <span>Start Your Transformation</span>
             </div>
 

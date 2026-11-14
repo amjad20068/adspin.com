@@ -64,7 +64,7 @@ export const PortfolioGallery: React.FC = () => {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-xs px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider text-brand-black shadow-xs">
+                <div className="absolute top-4 left-4 bg-white border border-brand-gray-200 px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider text-brand-black shadow-xs">
                   {project.category}
                 </div>
                 <div className="absolute top-4 right-4 bg-brand-black/80 text-white px-2.5 py-1 rounded-full text-[10px] font-mono">

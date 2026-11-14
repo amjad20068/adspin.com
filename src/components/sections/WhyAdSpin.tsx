@@ -1,5 +1,5 @@
 import React from "react";
-import { Compass, Sparkles, ShieldCheck, TrendingUp } from "lucide-react";
+import { Compass, PenTool, ShieldCheck, TrendingUp } from "lucide-react";
 import { SpiralMark } from "@/components/ui/SpiralMark";
 
 export const WhyAdSpin: React.FC = () => {
@@ -14,7 +14,7 @@ export const WhyAdSpin: React.FC = () => {
     {
       number: "02",
       title: "Creative Excellence",
-      icon: Sparkles,
+      icon: PenTool,
       description:
         "We reject formulaic templates and recycled design trends. Every logomark, editorial brochure, and video composition is custom-crafted to establish instant distinctiveness and emotional resonance.",
     },

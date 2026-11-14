@@ -46,7 +46,7 @@ export const SpiralMark: React.FC<SpiralMarkProps> = ({
         alt="AD SPIN Signature Red Spiral"
         width={size}
         height={size}
-        className="w-full h-full object-contain pointer-events-none drop-shadow-sm"
+        className="w-full h-full object-contain pointer-events-none"
         priority
       />
     </motion.div>

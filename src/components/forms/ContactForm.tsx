@@ -88,19 +88,19 @@ export const ContactForm: React.FC = () => {
 
   return (
     <div className="space-y-8">
-      {/* 1. Fast Direct WhatsApp Booking Box (User special request) */}
-      <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-[#25D366]/10 to-[#128C7E]/5 border border-[#25D366]/30">
+      {/* 1. Fast Direct WhatsApp Booking Box */}
+      <div className="p-6 sm:p-8 rounded-2xl bg-brand-gray-50 border border-brand-gray-200">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
-            <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#128C7E] uppercase tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-[#25D366] animate-ping" />
-              <span>Instant WhatsApp Booking</span>
+            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-brand-black uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-brand-red" />
+              <span>Direct WhatsApp Booking</span>
             </div>
             <h3 className="text-lg font-bold text-brand-black">
-              Need immediate discussion with our creative directors?
+              Need immediate discussion with our creative team?
             </h3>
             <p className="text-xs text-brand-gray-600">
-              Skip the form and chat directly on WhatsApp (+91 773 625 9099). Average response time: under 15 minutes.
+              Skip the form and chat directly on WhatsApp (+91 773 625 9099).
             </p>
           </div>
           <a
@@ -109,7 +109,7 @@ export const ContactForm: React.FC = () => {
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-semibold text-xs tracking-wide shadow-md transition-all group"
+            className="shrink-0 inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-semibold text-xs tracking-wide transition-all group"
           >
             <WhatsAppIcon size={18} className="text-white" />
             <span>Chat on WhatsApp</span>

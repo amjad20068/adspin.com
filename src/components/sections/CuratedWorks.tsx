@@ -145,7 +145,7 @@ export const CuratedWorks: React.FC = () => {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-xs px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider text-brand-black shadow-xs">
+                <div className="absolute top-4 left-4 bg-white border border-brand-gray-200 px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider text-brand-black shadow-xs">
                   {work.category}
                 </div>
               </div>

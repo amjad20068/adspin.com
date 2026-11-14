@@ -10,7 +10,6 @@ import { NAV_LINKS } from "@/data/navigation";
 import { AGENCY_CONFIG } from "@/lib/utils";
 import { MobileNav } from "./MobileNav";
 import { Button } from "@/components/ui/Button";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -34,7 +33,7 @@ export const Header: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-md py-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] border-b border-brand-gray-200"
+            ? "bg-white py-3.5 shadow-sm border-b border-brand-gray-200"
             : "bg-transparent py-5 sm:py-7"
         }`}
       >
@@ -84,8 +83,8 @@ export const Header: React.FC = () => {
               })}
             </nav>
 
-            {/* Right Actions: Instagram + WhatsApp + Let's Talk CTA */}
-            <div className="hidden sm:flex items-center gap-2.5">
+            {/* Right Actions: Instagram + Let's Talk CTA */}
+            <div className="hidden sm:flex items-center gap-3">
               {/* Instagram Official Link */}
               <a
                 href={AGENCY_CONFIG.instagram}
@@ -93,21 +92,9 @@ export const Header: React.FC = () => {
                 rel="noopener noreferrer"
                 aria-label="Official Instagram @ad_spin"
                 title="Follow @ad_spin on Instagram"
-                className="p-2.5 rounded-full text-brand-black hover:text-white hover:bg-brand-red transition-all duration-200 border border-brand-gray-200/80 bg-white shadow-xs"
+                className="p-2.5 rounded-full text-brand-black hover:text-white hover:bg-brand-red transition-all duration-200 border border-brand-gray-200 bg-white shadow-xs"
               >
                 <Instagram className="w-4 h-4" />
-              </a>
-
-              {/* Direct WhatsApp Quick Booking */}
-              <a
-                href={AGENCY_CONFIG.getWhatsAppUrl("Hello Ad Spin! I'd like to book a consultation for our brand.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Book via WhatsApp"
-                className="hidden xl:inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-semibold text-brand-black bg-white hover:bg-[#25D366] hover:text-white border border-brand-gray-200/80 transition-all duration-200 shadow-xs group"
-              >
-                <WhatsAppIcon size={16} className="text-[#25D366] group-hover:text-white transition-colors" />
-                <span>WhatsApp</span>
               </a>
 
               {/* Primary CTA: Let's Talk */}
@@ -117,17 +104,8 @@ export const Header: React.FC = () => {
               </Button>
             </div>
 
-            {/* Mobile Actions: WhatsApp Icon + Hamburger Trigger */}
+            {/* Mobile Actions: Hamburger Trigger */}
             <div className="flex sm:hidden items-center gap-2">
-              <a
-                href={AGENCY_CONFIG.getWhatsAppUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Book via WhatsApp"
-                className="p-2.5 rounded-full bg-[#25D366] text-white flex items-center justify-center"
-              >
-                <WhatsAppIcon size={18} className="text-white" />
-              </a>
               <button
                 onClick={() => setMobileOpen(true)}
                 aria-label="Open navigation menu"

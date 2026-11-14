@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Sparkles, FileDown } from "lucide-react";
+import { ArrowUpRight, FileDown } from "lucide-react";
 import { SpiralMark } from "@/components/ui/SpiralMark";
 import { Button } from "@/components/ui/Button";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
@@ -13,10 +13,6 @@ import { AGENCY_CONFIG } from "@/lib/utils";
 export const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-[85vh] sm:min-h-[90vh] flex flex-col justify-between pt-28 sm:pt-32 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
-      {/* Subtle clean ambient background */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
-      <div className="absolute top-1/4 right-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-brand-red/[0.04] rounded-full blur-3xl pointer-events-none -z-10" />
-
       <div className="max-w-7xl mx-auto w-full flex-1 flex flex-col justify-center relative z-10 py-4 sm:py-10">
         {/* Hero Editorial Headline with Signature Red Spiral */}
         <div className="relative">
@@ -152,8 +148,8 @@ export const HeroSection: React.FC = () => {
 
       {/* Bottom Ticker: Verified Portfolio Clients */}
       <div className="border-t border-brand-gray-200 pt-4 sm:pt-6 mt-6 sm:mt-8 overflow-hidden w-full">
-        <div className="flex items-center gap-2 sm:gap-4 text-[10px] sm:text-xs font-mono text-brand-gray-400 uppercase tracking-widest mb-2 sm:mb-3">
-          <Sparkles className="w-3 h-3 text-brand-red shrink-0" />
+        <div className="flex items-center gap-2 sm:gap-4 text-[10px] sm:text-xs font-mono text-brand-gray-500 uppercase tracking-widest mb-2 sm:mb-3">
+          <span className="w-1.5 h-1.5 rounded-full bg-brand-red shrink-0" />
           <span className="truncate">Selected Verified Clients From Our 72-Page Portfolio</span>
         </div>
         <div className="relative w-full overflow-hidden whitespace-nowrap">
