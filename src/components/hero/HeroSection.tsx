@@ -18,19 +18,6 @@ export const HeroSection: React.FC = () => {
       <div className="absolute top-1/4 right-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-brand-red/[0.04] rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto w-full flex-1 flex flex-col justify-center relative z-10 py-4 sm:py-10">
-        {/* Top Minimal Agency Pill */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex items-center gap-2 mb-4 sm:mb-8"
-        >
-          <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-brand-gray-50 border border-brand-gray-200 text-[10px] sm:text-xs font-mono uppercase tracking-wider text-brand-black shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-brand-red animate-pulse" />
-            <span>Creative Branding • Graphic Design • Advertising</span>
-          </div>
-        </motion.div>
-
         {/* Hero Editorial Headline with Signature Red Spiral */}
         <div className="relative">
           <motion.div
